@@ -13,12 +13,46 @@ html {
 }
 
 body {
-    background-color: $dark-blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    // font-size: 32px;
 }
+
+/*  Daftar Isi */
+/*  HTML, CSS, JS ONLY!
+    1. Background           : .container
+    2. card                 : .card
+    3. content              : .content
+      3a. content text      : .content-text
+      3b. image and buttons : .img > btn
+    4. footer atribution
+*/
+
+// 1. Background           : .container
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $grayish-blue;
+}
+
+// 2. card                 : .card
+.card {
+    background-color: white;
+}
+// 3. content              : .content
+//   3a. content text      : .content-text
+//   3b. image and buttons : .img > btn
+// 4. footer atribution
+
+// atribute
+// .attribution {
+//     font-size: 11px;
+//     text-align: center;
+//   }
+
+//   .attribution a {
+//     color: hsl(228, 45%, 44%);
+//   }
