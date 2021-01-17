@@ -23,8 +23,9 @@ body {
     1. Background           : .container
     2. card                 : .card
     3. content              : .content
-      3a. content text      : .content-text
-      3b. image and buttons : .img > btn
+      3a. image and buttons : .img > btn
+      3b. background patern : .bg-pattern
+      3c. content text      : .content-text
     4. footer atribution
 */
 
@@ -40,11 +41,90 @@ body {
 
 // 2. card                 : .card
 .card {
+    height: 100vh;
     background-color: white;
+    padding: 20px;
 }
 // 3. content              : .content
-//   3a. content text      : .content-text
-//   3b. image and buttons : .img > btn
+.content {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    position: relative;
+
+}
+//   3a. image and buttons : .img > btn
+    .img {
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 20px;
+        -webkit-box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.23); 
+        box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.23);
+        z-index: 2;
+        
+        img {
+            height: 40vh;
+            border-radius: 5px;
+        }
+  
+    }
+    .bg-pattern {
+        // background-color: royalblue;
+        position: absolute;
+        z-index: 1;
+        top: -30px;
+        left: -10px;
+    }
+    .bg-pattern-2 {
+        // background-color: royalblue;
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        top: 70px;
+    }
+    
+    
+    // BUTTON icons
+    .btn {
+        position: absolute;
+        bottom: -15px;
+        right: 4.45em;
+        display: flex;
+        width:4.6875em;
+        justify-content: space-evenly;
+        padding: .5em 0;
+        border-radius:1em;
+        text-decoration:none;
+        text-align:center;
+        background-color: white;
+        -webkit-box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.23); 
+        box-shadow: 0px 7px 17px 0px rgba(0,0,0,0.23);       
+        
+        svg {
+            fill: rgb(156, 154, 154);;
+        }
+    }
+  
+//   3b. content text      : .content-text
+    .content-text {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 20px;
+        padding: 12px;
+        strong {
+            margin-top: 20px;
+            margin-bottom: 3px;
+        }
+        span {
+            font-size: .9rem;
+            color: rgb(194, 194, 194);
+        }
+    }
 // 4. footer atribution
 
 // atribute
