@@ -168,7 +168,8 @@ body {
     @include breakpoint-up(large) {
         width: 60vw;
         height: 50vh;
-        background-color: magenta;
+        background-color: #f0f0f0;
+        border-radius: 10px;
     }
 }
 
@@ -177,5 +178,23 @@ body {
     @include breakpoint-up(large) {
         display: flex;
         flex-direction: row-reverse;
+        margin-top: 15px;
+    }
+}
+.img {
+    @include breakpoint-up(large) {
+        margin: auto 20px;
+    }
+}
+.content-text {
+    @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+.btn {
+    @include breakpoint-up(large) {
+       right: 60%;
     }
 }
