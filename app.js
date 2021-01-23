@@ -1,29 +1,38 @@
-var slideIndex = 1;
-testiSlide(slideIndex);
+let currSlide = 1;
+goToSlide(currSlide);
 
+function arrow(n) {
+  goToSlide(currSlide += n);
+}
 
-function arrow(e) {
-  testiSlide(slideIndex += e);
+function currentSlide(n){
+  goToSlide(currSlide = n);
 }
 
 
-function testiSlide(e) {
+function goToSlide(n) {
+  let slideOne = document.querySelectorAll('.slide1');
+  let slideTwo = document.querySelectorAll('.slide2');
 
-    let slideOne = document.querySelectorAll('.slider1'); 
-    let slideTwo = document.querySelectorAll('.slider2');
+  slides = [slideOne, slideTwo];
 
+  if(n > slides.length){
+    currSlide = 1;
+  }
+  if(n < 1){
+    currSlide = slides.length;
+  }
+
+  for(let i=0; i < slides.length; i++){
+    console.log(slides.length);
+    slides[i].forEach(item => {
+       item.style.display = 'none';
+    })
     
-    // if (e > slideOne.length) {
-    //   slideIndex = 1
-    // }
-    // if (e < 1) {
-    //   slideIndex = slideOne.length
-    //   console.log(slideOne.length);
-    // }
-    // for (let i = 0; i < slideOne.length; i++) {
-    //   slideOne[i].style.display = "none";
+  }
 
-    // }
-    // slideOne[slideIndex-1].style.display = "block";
-
+  slides[currSlide-1].forEach(function(item) {
+    item.style.display = 'block'
+  });
+  
 }
